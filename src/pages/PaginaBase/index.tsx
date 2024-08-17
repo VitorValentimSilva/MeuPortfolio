@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom"
 import Cabecalho from "../../components/Cabecalho"
 import EstilosGlobais from "../../components/EstilosGlobais"
+import Rodape from "../../components/Rodape"
 
 const PaginaBase = () => {
   return(
@@ -8,6 +9,7 @@ const PaginaBase = () => {
       <EstilosGlobais />
       <Cabecalho />
       <Outlet />
+      <Rodape />
     </>
   )
 }
