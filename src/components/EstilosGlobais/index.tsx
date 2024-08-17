@@ -5,6 +5,7 @@ const EstilosGlobais = createGlobalStyle`
     line-height: 1.15; 
     -webkit-text-size-adjust: 100%; 
     font-family: "Source Sans 3", sans-serif;
+    background-color: #F5F5F5;
   }
   body {
     margin: 0;
