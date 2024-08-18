@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 const SectionEstilizada = styled.section`
   background-color: #EAF2FD;
-  padding: 2.3% 6%;
+  padding: 2.3% 28% 2.3% 6%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.300);
 
   h2{
-    font-size: 33px;
+    font-size: 34px;
   }
 
   p{

@@ -21,7 +21,7 @@ const CampoNavegacao = () => {
   return(
     <NavEstiliazado>
       <a href="#sobreMim">Sobre Mim</a>
-      <a href="">Skills</a>
+      <a href="#skills">Skills</a>
       <a href="">Hobbies</a>
       <a href="">Formação</a>
       <a href="">Projeto</a>
