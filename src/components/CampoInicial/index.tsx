@@ -5,6 +5,7 @@ const SectionEstilizado = styled.section`
   align-items: center;
   justify-content: space-between;
   gap: 6%;
+  padding: 5% 6% 10% 6%;
 
   div{
     width: 70%;
@@ -18,7 +19,7 @@ const SectionEstilizado = styled.section`
   }
 
   p{
-    margin: 0 0 2% 0;
+    margin: 0 0 3% 0;
     font-size: 23px;
     font-weight: 400;
     text-align: justify;

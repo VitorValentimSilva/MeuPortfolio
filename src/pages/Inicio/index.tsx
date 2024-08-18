@@ -1,8 +1,9 @@
 import styled from "styled-components"
 import CampoInicial from "../../components/CampoInicial"
+import SobreMim from "../../components/SobreMim"
 
 const MainEstilizado = styled.main`
-  padding: 3% 6% 0 6%;
+  
 `
 
 const Inicio = () => {
@@ -10,7 +11,7 @@ const Inicio = () => {
     <MainEstilizado>
       <CampoInicial />
 
-
+      <SobreMim />
     </MainEstilizado>
   )
 }
