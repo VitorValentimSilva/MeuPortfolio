@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 const SectionEstilizada = styled.section`
@@ -17,12 +18,16 @@ const SectionEstilizada = styled.section`
   }
 `;
 
-const SobreMim = () => {
+interface SobreMimProps {
+  nome: string
+}
+
+const SobreMim: React.FC<SobreMimProps> = ({ nome }) => {
   return (
     <SectionEstilizada id="sobreMim">
       <h2>Sobre Mim</h2>
 
-      <p>Olá! Eu sou Vitor Valentim, tenho 19 anos e sou natural de Presidente Prudente, interior de São Paulo. Atualmente, estou no quarto semestre do curso de Análise e Desenvolvimento de Sistemas na Universidade do Oeste Paulista (Unoeste).</p>
+      <p>Olá! Eu sou {nome}, tenho 19 anos e sou natural de Presidente Prudente, interior de São Paulo. Atualmente, estou no quarto semestre do curso de Análise e Desenvolvimento de Sistemas na Universidade do Oeste Paulista (Unoeste).</p>
 
       <p>Minha paixão pela tecnologia começou na infância e, ao longo dos anos, se transformou em uma carreira. Desde o término do ensino médio, tenho me dedicado à programação, com experiência prática de 1 ano e meio em HTML, CSS, JavaScript, Node.js (Express) e MySQL. Além disso, estou constantemente aprimorando minhas habilidades em React e TypeScript, tanto na faculdade quanto em cursos complementares.</p>
 

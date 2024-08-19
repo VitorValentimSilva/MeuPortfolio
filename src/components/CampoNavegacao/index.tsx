@@ -1,33 +1,37 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 const NavEstiliazado = styled.nav`
   display: flex;
   align-items: center;
   gap: 50px;
 
-  a{
+  a {
     font-size: 20px;
     font-weight: 500;
     color: black;
     text-decoration: none;
   }
 
-  a:hover{
+  a:hover {
     color: #5a5a5ab9;
   }
-`
+`;
 
-const CampoNavegacao = () => {
-  return(
-    <NavEstiliazado>
-      <a href="#sobreMim">Sobre Mim</a>
-      <a href="#skills">Skills</a>
-      <a href="">Hobbies</a>
-      <a href="">Formação</a>
-      <a href="">Projeto</a>
-      <a href="mailto:vitorvalentin840@gmail.com">vitorvalentin840@gmail.com</a>
-    </NavEstiliazado>
-  )
+interface CampoNavegacaoProps {
+  email: string;
 }
 
-export default CampoNavegacao
+const CampoNavegacao: React.FC<CampoNavegacaoProps> = ({ email }) => {
+  return (
+    <NavEstiliazado>
+      <a href="#sobreMim">Sobre Mim</a>
+      <a href="#Skills">Skills</a>
+      <a href="#Hobbies">Hobbies</a>
+      <a href="#formacao">Formação</a>
+      <a href="#projeto">Projeto</a>
+      <a href={`mailto:${email}`}>{email}</a>
+    </NavEstiliazado>
+  );
+};
+
+export default CampoNavegacao;

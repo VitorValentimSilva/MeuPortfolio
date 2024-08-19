@@ -1,3 +1,4 @@
+import React from "react"
 import styled from "styled-components"
 
 const SectionEstilizado = styled.section`
@@ -60,11 +61,16 @@ const DivEstilizada = styled.div`
   }
 `
 
-const CampoInicial = () => {
+interface CampoInicialProps {
+  nome: string,
+  img: string
+}
+
+const CampoInicial: React.FC<CampoInicialProps> = ({ nome, img }) => {
   return(
     <SectionEstilizado>
       <div>
-        <h1>Olá, eu sou Vitor Valentim – Desenvolvedor Full Stack</h1>
+        <h1>Olá, eu sou {nome} – Desenvolvedor Full Stack</h1>
         <p>Sou um desenvolvedor Full Stack em formação, atualmente cursando Análise e Desenvolvimento de Sistemas. Estou preparado para enfrentar desafios complexos e criar soluções inovadoras.</p>
 
         <DivEstilizada>
@@ -79,7 +85,7 @@ const CampoInicial = () => {
         </DivEstilizada>
       </div>
 
-      <img src="/img/fotoMinha.jpeg" alt="Foto do meu rosto" />
+      <img src={img} alt="Foto do meu rosto" />
     </SectionEstilizado>
   )
 }

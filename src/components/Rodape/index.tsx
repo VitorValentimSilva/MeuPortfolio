@@ -17,11 +17,16 @@ const FooterEstilizado = styled.footer`
   }
 `
 
-const Rodape = () => {
+interface RodapeProps {
+  nomeDoDesenvolvedor: string,
+  ano: number
+}
+
+const Rodape: React.FC<RodapeProps> = ({ nomeDoDesenvolvedor, ano }) => {
   return(
     <FooterEstilizado>
-      <p>Desenvolvido por Vitor Valentim</p>
-      <p>2024</p>
+      <p>Desenvolvido por {nomeDoDesenvolvedor}</p>
+      <p>{ano}</p>
     </FooterEstilizado>
   )
 }

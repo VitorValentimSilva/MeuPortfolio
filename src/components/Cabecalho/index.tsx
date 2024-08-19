@@ -25,17 +25,22 @@ const LinkEstilizado = styled(Link)`
     color: black;
   }
 `
+interface CabecalhoProps {
+  nome: string;
+}
 
-const Cabecalho = () => {
+const Cabecalho: React.FC<CabecalhoProps> = ({ nome }) => {
   return(
     <HeaderEstilizado>
       <LinkEstilizado to="/">
         <img src="/icon/awesome.png" alt="icone" />
 
-        <p>Vitor Valentim</p>
+        <p>{nome}</p>
       </LinkEstilizado>
 
-      <CampoNavegacao />
+      <CampoNavegacao 
+        email = "vitorvalentin840@gmail.com"
+      />
     </HeaderEstilizado>
   )
 }

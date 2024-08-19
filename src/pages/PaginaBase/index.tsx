@@ -7,9 +7,14 @@ const PaginaBase = () => {
   return(
     <>
       <EstilosGlobais />
-      <Cabecalho />
+      <Cabecalho 
+        nome = "Vitor Valentim"
+      />
       <Outlet />
-      <Rodape />
+      <Rodape 
+        nomeDoDesenvolvedor = "Vitor Valentim"
+        ano = {2024}
+      />
     </>
   )
 }
