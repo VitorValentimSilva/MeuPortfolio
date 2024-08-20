@@ -35,7 +35,7 @@ interface FormacaoProps {
 const Formacao: React.FC<FormacaoProps> = ({ img, nomeFormacao, andamento, nomeInstituicao }) => {
   return(
     <DivEstiliazada>
-      <img src={"/img/" + img} alt="" />
+      <img src={"/img/" + img} alt={img} />
 
       <h3>{nomeFormacao}</h3>
       <p>{andamento} - {nomeInstituicao}</p>

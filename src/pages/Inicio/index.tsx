@@ -3,12 +3,13 @@ import CampoInicial from "../../components/CampoInicial"
 import SobreMim from "../../components/SobreMim"
 import CampoInformacoes from "../../components/CampoInformacoes"
 import Formacao from "../../components/Formacao"
+import Projetos from "../../components/Projetos"
 
 const MainEstilizado = styled.main`
   
 `
 
-const SectionEstiliazada = styled.section`
+const SectionFormacao = styled.section`
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -27,6 +28,18 @@ const SectionEstiliazada = styled.section`
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+`
+
+const SectionProjetos = styled.section`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 6%;
+
+  h2{
+    font-size: 35px;
+    margin-bottom: 4%;
   }
 `
 
@@ -65,7 +78,7 @@ const Inicio = () => {
         ]}
       />
 
-      <SectionEstiliazada>
+      <SectionFormacao id="formacao">
         <h2>Formação acadêmica</h2>
 
         <div>
@@ -83,7 +96,29 @@ const Inicio = () => {
             nomeInstituicao = "One Oracle Next Education"
           />
         </div>
-      </SectionEstiliazada>
+      </SectionFormacao>
+
+      <SectionProjetos>
+        <h2>Projetos</h2>
+
+        <Projetos 
+          inverter = {false}
+          img = "projetoAluraFlix.png"
+          nomeProjeto = "AluraFlix"
+          descricaoProjeto = "Challenge Alura"
+          linkRepositorio = "https://github.com/VitorValentimSilva/AluraFlix"
+          linkProjeto = "https://alura-flix-olive.vercel.app"
+        />
+
+        <Projetos 
+          inverter = {true}
+          img = "projetoOrgano.png"
+          nomeProjeto = "Organo"
+          descricaoProjeto = "Challenge Alura"
+          linkRepositorio = "https://github.com/VitorValentimSilva/organo"
+          linkProjeto = "https://organo-nu-liart.vercel.app"
+        />
+      </SectionProjetos>
     </MainEstilizado>
   )
 }
