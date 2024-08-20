@@ -48,13 +48,12 @@ interface CampoInformacoesProps {
 }
 
 const CampoInformacoes: React.FC<CampoInformacoesProps> = ({ nomePrincipal, nomesDosCampos }) => {
-
   const elementos = nomesDosCampos.map((nome, index) => (
     <div key={index}>
       <img src={"/icon/icone" + nome + ".png"} alt={"icone do " + nome} />
       <p>{nome}</p>
     </div>
-  ));
+  ))
 
   return(
     <SectionEstilizada>
