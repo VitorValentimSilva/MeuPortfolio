@@ -5,16 +5,33 @@ const SectionEstilizada = styled.section`
   background-color: #EAF2FD;
   padding: 2.3% 28% 2.3% 6%;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.300);
+  border-radius: 8px;
+  margin: 2% 0;
 
   h2{
-    font-size: 34px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: ${({ theme }) => theme.colors.heading || "#383838"};
   }
 
   p{
-    font-size: 19px;
+    font-size: 1.125rem;
     font-weight: 400;
     text-align: justify;
-    margin: 1.8% 0;
+    margin: 1.2rem 0;
+    color: ${({ theme }) => theme.colors.text || "#252525"};
+  }
+
+  @media (max-width: 768px) {
+    padding: 4% 2%;
+    
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
   }
 `;
 

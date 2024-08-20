@@ -12,8 +12,13 @@ const FooterEstilizado = styled.footer`
   p{
     font-size: 17px;
     font-weight: 600;
-    color: black;
+    color: ${({ theme }) => theme.colors.text || "black"};
     margin: 0;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.linkHover || "gray"};
+    }
   }
 `
 

@@ -1,141 +1,111 @@
 import { createGlobalStyle } from "styled-components";
 
 const EstilosGlobais = createGlobalStyle`
-  html {
-    line-height: 1.15; 
-    -webkit-text-size-adjust: 100%; 
-    font-family: "Source Sans 3", sans-serif;
-    background-color: #F5F5F5;
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
+
+  html {
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Source Sans 3", sans-serif;
+    background-color: ${({ theme }) => theme.colors.background || "#F5F5F5"};
+  }
+
   body {
     margin: 0;
     min-height: 100vh;
+    color: ${({ theme }) => theme.colors.text || "#333333"};
   }
+
   main {
     display: block;
   }
-  h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0.5em 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: ${({ theme }) => theme.colors.primary || "#2D3E50"};
   }
-  hr {
-    box-sizing: content-box; 
-    height: 0; 
-    overflow: visible; 
+
+  p {
+    margin: 0.75em 0;
   }
+
   a {
-    background-color: transparent;
+    color: ${({ theme }) => theme.colors.link || "#2D3E50"};
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
   }
-  abbr[title] {
-    border-bottom: none; 
-    text-decoration: underline; 
-    text-decoration: underline dotted; 
+
+  a:hover, a:focus {
+    color: ${({ theme }) => theme.colors.linkHover || "#FF6F61"};
+    outline: none;
   }
-  b,
-  strong {
-    font-weight: bolder;
-  }
-  code,
-  kbd,
-  samp {
-    font-family: monospace, monospace; 
-    font-size: 1em; 
-  }
-  small {
-    font-size: 80%;
-  }
-  sub,
-  sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-  }
-  sub {
-    bottom: -0.25em;
-  }
-  sup {
-    top: -0.5em;
-  }
+
   img {
+    max-width: 100%;
+    height: auto;
     border-style: none;
   }
-  button,
-  input,
-  optgroup,
-  select,
-  textarea {
-    font-family: inherit; 
-    font-size: 100%; 
-    line-height: 1.15; 
-    margin: 0; 
+
+  button, input, select, textarea {
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.5;
   }
-  button,
-  input { 
+
+  button, input {
     overflow: visible;
   }
-  button,
-  select { 
-    text-transform: none;
-  }
-  button::-moz-focus-inner,
-  [type="button"]::-moz-focus-inner,
-  [type="reset"]::-moz-focus-inner,
-  [type="submit"]::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
-  }
-  button:-moz-focusring,
-  [type="button"]:-moz-focusring,
-  [type="reset"]:-moz-focusring,
-  [type="submit"]:-moz-focusring {
-    outline: 1px dotted ButtonText;
-  }
-  fieldset {
-    padding: 0.35em 0.75em 0.625em;
-  }
-  legend {
-    box-sizing: border-box; 
-    color: inherit; 
-    display: table; 
-    max-width: 100%; 
-    padding: 0; 
-    white-space: normal; 
-  }
-  progress {
-    vertical-align: baseline;
-  }
-  textarea {
-    overflow: auto;
-  }
-  [type="checkbox"],
-  [type="radio"] {
-    box-sizing: border-box; 
-    padding: 0; 
-  }
-  [type="number"]::-webkit-inner-spin-button,
-  [type="number"]::-webkit-outer-spin-button {
-    height: auto;
-  }
-  [type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-  }
-  ::-webkit-file-upload-button {
-    -webkit-appearance: button; 
-    font: inherit; 
-  }
-  details {
-    display: block;
-  }
-  summary {
-    display: list-item;
-  }
-  template {
-    display: none;
-  }
-  [hidden] {
-    display: none;
-  }
-`
 
-export default EstilosGlobais
+  button {
+    cursor: pointer;
+    border: none;
+    background-color: ${({ theme }) => theme.colors.buttonBackground || "#2D3E50"};
+    color: ${({ theme }) => theme.colors.buttonText || "#FFFFFF"};
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  button:hover, button:focus {
+    background-color: ${({ theme }) => theme.colors.buttonHover || "#FF6F61"};
+    outline: none;
+  }
+
+  ::selection {
+    background-color: ${({ theme }) => theme.colors.selectionBackground || "#FF6F61"};
+    color: ${({ theme }) => theme.colors.selectionText || "#FFFFFF"};
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.colors.scrollbarTrack || "#F5F5F5"};
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.colors.scrollbarThumb || "#2D3E50"};
+    border-radius: 6px;
+    border: 3px solid ${({ theme }) => theme.colors.scrollbarTrack || "#F5F5F5"};
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+`;
+
+export default EstilosGlobais;

@@ -6,21 +6,27 @@ import Formacao from "../../components/Formacao"
 import Projetos from "../../components/Projetos"
 
 const MainEstilizado = styled.main`
-  
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background-color: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.text};
 `
 
 const SectionFormacao = styled.section`
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #EAF2FD;
+  background-color: ${({ theme }) => theme.colors.secondaryBackground || "#EAF2FD"};
   padding: 2.4% 6%;
   margin: 8% 0;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.300);
+  border-radius: 8px;
 
   h2{
-    font-size: 35px;
-    padding-bottom: 1%;
+    font-size: 2.2rem;
+    padding-bottom: 1rem;
+    color: ${({ theme }) => theme.colors.primaryText};
   }
 
   div{
@@ -28,6 +34,14 @@ const SectionFormacao = styled.section`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 3% 5%;
+    div {
+      flex-direction: column;
+    }
   }
 `
 
@@ -36,10 +50,12 @@ const SectionProjetos = styled.section`
   align-items: center;
   flex-direction: column;
   padding: 0 6%;
+  margin-bottom: 5%;
 
   h2{
-    font-size: 35px;
+    font-size: 2.2rem;
     margin-bottom: 4%;
+    color: ${({ theme }) => theme.colors.primaryText};
   }
 `
 
@@ -78,7 +94,7 @@ const Inicio = () => {
         ]}
       />
 
-      <SectionFormacao id="formacao">
+      <SectionFormacao id="Formacao">
         <h2>Formação acadêmica</h2>
 
         <div>
@@ -98,7 +114,7 @@ const Inicio = () => {
         </div>
       </SectionFormacao>
 
-      <SectionProjetos>
+      <SectionProjetos id="Projeto">
         <h2>Projetos</h2>
 
         <Projetos 

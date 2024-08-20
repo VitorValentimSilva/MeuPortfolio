@@ -22,7 +22,11 @@ const LinkEstilizado = styled(Link)`
   p{
     font-size: 26px;
     font-weight: 600;
-    color: black;
+    color: ${({ theme }) => theme.colors.primary || "black"};
+  }
+
+  @media(max-width: 450px){
+    display: none;
   }
 `
 interface CabecalhoProps {

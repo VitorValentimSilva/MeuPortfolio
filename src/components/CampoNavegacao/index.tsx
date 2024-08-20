@@ -5,15 +5,30 @@ const NavEstiliazado = styled.nav`
   align-items: center;
   gap: 50px;
 
-  a {
+  div{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  a{
     font-size: 20px;
     font-weight: 500;
-    color: black;
+    color: ${({ theme }) => theme.colors.link || "black"};
     text-decoration: none;
+    transition: color 0.3s ease-in-out;
   }
 
   a:hover {
-    color: #5a5a5ab9;
+    color: ${({ theme }) => theme.colors.linkHover || "#5a5a5ab9"};
+  }
+
+  .links{
+    @media(max-width: 1202px){
+      display: none;
+
+      
+    }
   }
 `;
 
@@ -24,12 +39,14 @@ interface CampoNavegacaoProps {
 const CampoNavegacao: React.FC<CampoNavegacaoProps> = ({ email }) => {
   return (
     <NavEstiliazado>
-      <a href="#sobreMim">Sobre Mim</a>
-      <a href="#Skills">Skills</a>
-      <a href="#Hobbies">Hobbies</a>
-      <a href="#formacao">Formação</a>
-      <a href="#projeto">Projeto</a>
-      <a href={`mailto:${email}`}>{email}</a>
+      <div className="links">
+        <a href="#sobreMim">Sobre Mim</a>
+        <a href="#Skills">Skills</a>
+        <a href="#Hobbies">Hobbies</a>
+        <a href="#Formacao">Formação</a>
+        <a href="#Projeto">Projeto</a>
+      </div>
+      <a href={`mailto:${email}`} className="email">{email}</a>
     </NavEstiliazado>
   );
 };
