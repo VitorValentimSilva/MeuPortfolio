@@ -79,6 +79,7 @@ const Inicio = () => {
           "JavaScript",
           "Node.Js",
           "React",
+          "TypeScript",
           "MySQL"
         ]}
       />

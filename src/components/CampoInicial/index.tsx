@@ -121,7 +121,7 @@ const CampoInicial: React.FC<CampoInicialProps> = ({ nome, img }) => {
             Instagram <img src="/icon/arrow.png" alt="Ícone de seta indicando um link externo" />
           </a>
 
-          <a href="https://drive.google.com/file/d/1xFDMVdLgNnFdMYo6YdmEIjc8ZRLjD_q-/view?usp=sharing" target="_blank" aria-label="Ver currículo">
+          <a href="https://drive.google.com/file/d/1YrWvf-1Dezmz-Wxoz6_pgs09nX8e2VH7/view?usp=sharing" target="_blank" aria-label="Ver currículo">
             Currículo <img src="/icon/arrow.png" alt="Ícone de seta indicando um link externo" />
           </a>
         </DivEstilizada>
