@@ -1,50 +1,34 @@
-# React + TypeScript + Vite
+# Portfólio Pessoal - Vitor Valentim
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao meu portfólio! Este projeto foi desenvolvido para apresentar minhas habilidades, projetos, e fornecer um pouco mais de informação sobre quem eu sou. Desenvolvido com React, TypeScript, e Vite, este site é a minha vitrine para as empresas que desejam saber mais sobre mim.
 
-Currently, two official plugins are available:
+## Descrição do Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este portfólio foi criado como parte do programa de formação em front-end da Alura em parceria com a Oracle. O design foi baseado em um modelo do Figma fornecido durante o curso, com personalizações que refletem meu estilo e minhas preferências.
 
-## Expanding the ESLint configuration
+### Seções do Portfólio
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Sobre Mim:** Uma breve introdução sobre quem eu sou, minha formação e minha trajetória profissional.
+- **Skills:** Uma lista das minhas habilidades técnicas, destacando as tecnologias e ferramentas com as quais tenho experiência.
+- **Hobbies:** Um espaço onde compartilho minhas paixões e atividades que gosto de fazer fora do ambiente de trabalho.
+- **Contato:** Informações para entrar em contato comigo, incluindo links para redes sociais e email.
+- **Projetos:** Uma seção dedicada aos projetos que desenvolvi, com links para ver mais detalhes no GitHub ou acessar as demos online.
 
-- Configure the top-level `parserOptions` property like this:
+## Tecnologias Utilizadas
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **React**
+- **TypeScript**
+- **Vite**
+- **Figma** (para design e layout)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Demonstração
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Confira o portfólio em funcionamento [aqui](https://meu-portfolio-nine-mu.vercel.app).
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Contribuição
+
+Este é um projeto pessoal, mas ficarei feliz em receber sugestões e melhorias. Sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
